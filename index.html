@@ -104,6 +104,3938 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 15px 30px;
+    gap: 30px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    white-space: nowrap;
+    font-family: var(--fonte-titulo);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    margin-right: 20px;
+}
+
+.logo span {
+    color: var(--dourado-claro);
+}
+
+.logo small {
+    font-size: 16px;
+    font-weight: normal;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 1px;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--dourado);
+    color: var(--dourado-claro);
+    font-size: 24px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+nav a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    background: rgba(214,162,31,0.2);
+    color: var(--dourado-claro);
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px 140px; /* Espaço extra embaixo para o overlap do container */
+    position: relative;
+    /* O fundo da section hero é transparente, permitindo ver a imagem fixada no body perfeitamente */
+}
+
+.hero-content {
+    max-width: 1050px;
+    width: 100%;
+    /* Efeito Glassmorphism Elegante */
+    background: rgba(255, 253, 248, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(214, 162, 31, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 5px solid var(--dourado);
+    border-radius: 24px;
+    padding: 60px 50px;
+    box-shadow: 
+        0 30px 60px rgba(30, 5, 5, 0.35),
+        inset 0 0 25px rgba(255,255,255,0.7);
+}
+
+.hero-kicker {
+    color: var(--vermelho-escuro);
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 84px;
+    line-height: 1.05;
+    color: var(--vermelho);
+    font-family: var(--fonte-titulo);
+    letter-spacing: 4px;
+    text-shadow: 
+        2px 2px 0px rgba(255,255,255,0.9), 
+        0 8px 25px rgba(87,7,7,0.25);
+    margin-bottom: 8px;
+}
+
+.hero-subtitle {
+    color: var(--vermelho);
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: var(--fonte-titulo);
+}
+
+.creator {
+    display: inline-block;
+    color: var(--vermelho-escuro);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0 30px;
+    padding: 8px 25px;
+    background: rgba(214, 162, 31, 0.15);
+    border: 1px solid var(--dourado);
+    border-radius: 30px;
+    letter-spacing: 0.5px;
+}
+
+.hero-description {
+    max-width: 850px;
+    margin: auto;
+    font-size: 20px;
+    color: var(--texto);
+    font-weight: 500;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 35px 0;
+}
+
+.chip {
+    background: linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro));
+    color: white;
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(87,7,7,0.3);
+    border: 1px solid rgba(214,162,31,0.5);
+    letter-spacing: 0.5px;
+}
+
+.search-box {
+    max-width: 750px;
+    margin: 35px auto 0;
+    display: flex;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid var(--dourado);
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+    box-shadow: 0 15px 45px rgba(142, 16, 16, 0.25);
+    border-color: var(--vermelho);
+    transform: translateY(-2px);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 22px 30px;
+    font-size: 18px;
+    font-family: inherit;
+    background: transparent;
+    color: var(--texto);
+}
+
+.search-box input::placeholder {
+    color: #a39587;
+}
+
+.search-box button {
+    width: 85px;
+    border: none;
+    background: linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro));
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.search-box button:hover {
+    background: linear-gradient(135deg, var(--vermelho-claro), var(--vermelho));
+}
+
+#searchInfo {
+    text-align: center;
+    color: var(--vermelho-escuro);
+    font-size: 17px;
+    font-weight: bold;
+    margin: 20px auto 0;
+    background: rgba(255,255,255,0.8);
+    display: inline-block;
+    padding: 8px 25px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+#searchInfo:empty {
+    display: none;
+}
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+   ========================================================= */
+
+.container {
+    max-width: 1250px;
+    margin: -70px auto 0; /* Cria um sobreposição elegante com o Hero */
+    padding: 80px 50px;
+    background: rgba(255, 250, 240, 0.50);
+    border-radius: 35px 35px 0 0;
+    box-shadow: 
+        0 -20px 50px rgba(0,0,0,0.25), 
+        0 0 0 1px rgba(214,162,31,0.2);
+    position: relative;
+    z-index: 5;
+}
+
+section {
+    scroll-margin-top: 110px;
+    margin-bottom: 85px;
+}
+
+/* =========================================================
+   TITULOS
+   ========================================================= */
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--vermelho-escuro);
+    font-size: 42px;
+    margin-bottom: 18px;
+    font-family: var(--fonte-titulo);
+    letter-spacing: -0.5px;
+}
+
+.section-title::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 45px;
+    background: linear-gradient(to bottom, var(--dourado-claro), var(--dourado));
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.section-intro {
+    color: var(--texto-suave);
+    font-size: 19px;
+    margin-bottom: 45px;
+    max-width: 950px;
+    padding-left: 24px;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-top: 4px solid var(--vermelho);
+    border-radius: 16px;
+    padding: 35px 30px;
+    box-shadow: var(--sombra);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-forte);
+    border-color: var(--dourado);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 4px;
+    background: var(--dourado);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.card:hover::after {
+    transform: scaleX(1);
+}
+
+.card h3 {
+    color: var(--vermelho-escuro);
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: var(--fonte-titulo);
+}
+
+.card h4 {
+    color: #7b5711;
+    margin: 18px 0 8px;
+    font-size: 18px;
+}
+
+.card p {
+    color: var(--texto);
+}
+
+.card ul {
+    padding-left: 24px;
+    margin-top: 10px;
+}
+
+.card li {
+    margin: 8px 0;
+}
+
+/* =========================================================
+   INTRO BOX
+   ========================================================= */
+
+.intro-box {
+    background: linear-gradient(to right, var(--branco), var(--creme-2));
+    border-left: 8px solid var(--dourado);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: var(--sombra);
+    margin-bottom: 35px;
+}
+
+.intro-box h3 {
+    color: var(--vermelho-escuro);
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-family: var(--fonte-titulo);
+}
+
+/* =========================================================
+   CITAÇÃO
+   ========================================================= */
+
+.quote {
+    background: linear-gradient(135deg, #fff9e6, #fffdf8);
+    border: 1px solid var(--dourado-claro);
+    border-left: 6px solid var(--dourado);
+    padding: 35px 45px;
+    border-radius: 16px;
+    margin: 35px 0;
+    font-style: italic;
+    font-size: 19px;
+    box-shadow: var(--sombra);
+    position: relative;
+}
+
+.quote strong {
+    color: var(--vermelho-escuro);
+    font-style: normal;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 12px;
+    font-family: var(--fonte-titulo);
+}
+
+/* =========================================================
+   BIBLIA
+   ========================================================= */
+
+.bible {
+    background: linear-gradient(to right, #fffdf7, #fffaf0);
+    border: 1px solid var(--borda);
+    border-left: 5px solid var(--vermelho);
+    border-radius: 10px;
+    padding: 22px 25px;
+    margin-top: 20px;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    position: relative;
+}
+
+.bible::before {
+    content: '“';
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 65px;
+    color: rgba(214, 162, 31, 0.15);
+    font-family: serif;
+    line-height: 1;
+}
+
+.bible strong {
+    color: var(--vermelho-escuro);
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+/* =========================================================
+   TRINDADE
+   ========================================================= */
+
+.trinity-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    padding: 45px;
+    background: linear-gradient(135deg, #fffdf7, #fdf4e3);
+    border: 1px solid var(--dourado-claro);
+    border-radius: 24px;
+    box-shadow: inset 0 0 20px rgba(214,162,31,0.1), var(--sombra);
+}
+
+.trinity-person {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 30% 30%, #ffffff, #fff8dd);
+    border: 5px solid var(--dourado);
+    box-shadow: 
+        0 15px 35px rgba(87,7,7,0.15), 
+        inset 0 -5px 20px rgba(214,162,31,0.3);
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.trinity-person:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 20px 45px rgba(87,7,7,0.2), 
+        inset 0 -5px 25px rgba(214,162,31,0.4);
+    border-color: var(--vermelho);
+}
+
+.trinity-person strong {
+    color: var(--vermelho-escuro);
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-family: var(--fonte-titulo);
+}
+
+.trinity-person span {
+    color: var(--texto-suave);
+    font-size: 17px;
+    font-style: italic;
+}
+
+.trinity-symbol {
+    font-size: 50px;
+    color: var(--dourado);
+    text-shadow: 0 0 15px rgba(214,162,31,0.5);
+}
+
+/* =========================================================
+   OBJEÇÕES
+   ========================================================= */
+
+.objection {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+}
+
+.objection-title {
+    background: linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro));
+    color: white;
+    padding: 22px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--dourado);
+    font-family: var(--fonte-titulo);
+    letter-spacing: 0.5px;
+}
+
+.objection-content {
+    padding: 35px;
+    background: var(--branco);
+}
+
+.objection-content strong {
+    display: inline-block;
+    color: var(--vermelho-escuro);
+    background: var(--creme-2);
+    padding: 6px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--borda);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.objection-content strong:first-child {
+    margin-top: 0;
+}
+
+.objection-content p {
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.timeline {
+    border-left: 4px solid var(--dourado);
+    margin-left: 25px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 35px;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(8px);
+    border-color: var(--dourado);
+    box-shadow: var(--sombra-forte);
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: var(--vermelho);
+    border: 4px solid var(--dourado-claro);
+    border-radius: 50%;
+    left: -56px;
+    top: 30px;
+    box-shadow: 0 0 12px rgba(142,16,16,0.4);
+}
+
+.timeline-year {
+    color: var(--vermelho-escuro);
+    font-weight: 900;
+    font-size: 24px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+    border-bottom: 3px solid var(--dourado-claro);
+    padding-bottom: 4px;
+    font-family: var(--fonte-titulo);
+}
+
+/* =========================================================
+   TABELA
+   ========================================================= */
+
+.table-wrap {
+    overflow-x: auto;
+    background: var(--branco);
+    border-radius: 16px;
+    box-shadow: var(--sombra);
+    border: 1px solid var(--borda);
+    margin-top: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+th {
+    background: linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro));
+    color: white;
+    padding: 20px 25px;
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+th:last-child {
+    border-right: none;
+}
+
+td {
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--borda);
+    vertical-align: top;
+    color: var(--texto);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background: var(--creme);
+}
+
+tr:hover td {
+    background: #fffdf5;
+}
+
+/* =========================================================
+   FAQ / DETAILS
+   ========================================================= */
+
+details {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    margin-bottom: 15px;
+    padding: 22px 30px;
+    box-shadow: var(--sombra);
+    transition: all 0.3s;
+}
+
+details[open] {
+    border-color: var(--dourado);
+    box-shadow: var(--sombra-forte);
+}
+
+summary {
+    cursor: pointer;
+    color: var(--vermelho-escuro);
+    font-weight: bold;
+    font-size: 19px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: '+';
+    color: var(--dourado);
+    font-size: 26px;
+    font-weight: normal;
+}
+
+details[open] summary::after {
+    content: '−';
+}
+
+details p {
+    margin-top: 15px;
+    padding-top: 18px;
+    border-top: 1px solid var(--creme-2);
+    color: var(--texto);
+}
+
+/* =========================================================
+   CATEGORIAS
+   ========================================================= */
+
+.category-card {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    background: linear-gradient(145deg, #ffffff, #fffdf8);
+    border: 1px solid var(--borda);
+    padding: 35px 20px;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(145deg, #fffdf8, #fff5e6);
+    border-color: var(--dourado);
+    box-shadow: 0 15px 30px rgba(142, 16, 16, 0.1);
+}
+
+.category-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.08));
+}
+
+.category-card h3 {
+    color: var(--vermelho-escuro);
+    font-size: 20px;
+    font-family: var(--fonte-titulo);
+    margin-bottom: 5px;
+}
+
+.category-card p {
+    color: var(--texto-suave);
+    font-size: 15px;
+}
+
+/* =========================================================
+   FONTES
+   ========================================================= */
+
+#fontes .card {
+    background: linear-gradient(to bottom, #ffffff, #fffaf0);
+    border-top: 4px solid var(--vermelho);
+}
+
+#fontes .card h3 {
+    color: var(--vermelho-escuro);
+    font-size: 22px;
+}
+
+#fontes .card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: var(--creme-2);
+    border: 1px solid var(--dourado);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 15px;
+}
+
+#fontes .card a:hover {
+    background: var(--vermelho);
+    color: white !important;
+    border-color: var(--vermelho);
+    transform: translateX(5px);
+}
+
+/* =========================================================
+   BOTÃO TOPO
+   ========================================================= */
+
+#topButton {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 55px;
+    height: 55px;
+    border: 2px solid var(--dourado);
+    border-radius: 50%;
+    background: var(--vermelho-escuro);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 900;
+    transition: all 0.3s;
+}
+
+#topButton:hover {
+    background: var(--vermelho);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: linear-gradient(135deg, #3a0404, #570707, #3a0404);
+    color: rgba(255,255,255,0.9);
+    border-top: 5px solid var(--dourado);
+    text-align: center;
+    padding: 65px 20px 45px;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("https://wallpapercave.com/wp/wp15713548.jpg") center bottom / cover no-repeat;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+footer h2 {
+    color: var(--dourado-claro);
+    font-size: 32px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--fonte-titulo);
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.footer-author {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(214, 162, 31, 0.3);
+    color: var(--dourado);
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   UTILIDADES
+   ========================================================= */
+
+.hidden {
+    display: none !important;
+}
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media(max-width: 1024px) {
+    .navbar {
+        padding: 15px 20px;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .container {
+        padding: 60px 30px;
+        margin-top: -50px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 80px 15px 120px;
+    }
+
+    .hero-content {
+        padding: 45px 30px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media(max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(214, 162, 31, 0.3);
+    }
+
+    nav.nav-active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 15px;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .logo small {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 40px 20px;
+        border-radius: 25px 25px 0 0;
+        margin-top: -35px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 60px 15px 100px;
+    }
+    
+    .hero-content {
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .trinity-person {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .trinity-person strong {
+        font-size: 22px;
+    }
+    
+    .timeline {
+        margin-left: 10px;
+        padding-left: 25px;
+    }
+    
+    .timeline-item::before {
+        left: -41px;
+    }
+
+    .quote {
+        padding: 25px 20px;
+        font-size: 17px;
+    }
+
+    .objection-content {
+        padding: 20px;
+    }
+
+    .search-box input {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    .search-box button {
+        width: 65px;
+        font-size: 20px;
+    }
+}
+
+/* =========================================================
+   IMPRESSÃO
+   ========================================================= */
+
+@media print {
+    header, #topButton, .search-box {
+        display: none;
+    }
+    body::before, body::after {
+        display: none;
+    }
+    body {
+        background: white;
+    }
+    .card, .objection, .timeline-item, .container {
+        box-shadow: none;
+        border-color: #ccc;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ======================================================
+     HEADER
+     ====================================================== -->
+
+<header>
+
+<div class="navbar">
+
+<a href="#inicio" class="logo">
+    ✝ <span>Theotokos</span> — <small>Wiki Católica</small>
+</a>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">☰</button>
+
+<nav id="navMenu">
+
+<a href="#inicio">Início</a>
+<a href="#fundamentos">Fundamentos</a>
+<a href="#trindade">Trindade</a>
+<a href="#mariologia">Mariologia</a>
+<a href="#sacramentos">Sacramentos</a>
+<a href="#reforma">Reforma</a>
+<a href="#objecoes">Objeções</a>
+<a href="#fontes">Fontes</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- ======================================================
+     HERO
+     ====================================================== -->
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<div class="hero-kicker">
+    Bíblia • Tradição • Magistério • História
+</div>
+
+<h1>THEOTOKOS</h1>
+
+<div class="hero-subtitle">
+    Wiki Católica
+</div>
+
+<div class="creator">
+    Wiki criada por Kauã Farias
+</div>
+
+<p class="hero-description">
+
+Uma wiki dedicada ao estudo da fé católica, apresentando seus fundamentos
+à luz da Sagrada Escritura, da Tradição Apostólica e do Magistério da Igreja.
+O objetivo é explicar a doutrina católica de maneira organizada,
+aprofundada e respeitosa, especialmente para quem veio do protestantismo,
+para quem está conhecendo o catolicismo ou simplesmente deseja compreender
+melhor a fé cristã.
+
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Pesquise por Maria, Pedro, Eucaristia, Lutero, Trindade..."
+onkeyup="searchSite()">
+
+<button onclick="searchSite()">⌕</button>
+
+</div>
+
+<div id="searchInfo"></div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTEÚDO
+     ====================================================== -->
+
+<main class="container">
+
+
+<!-- ======================================================
+     COMO USAR
+     ====================================================== -->
+
+<section>
+
+<div class="intro-box">
+
+<h3>Como usar a Theotokos</h3>
+
+<p>
+
+A Theotokos foi pensada como uma ferramenta de formação e consulta.
+Ela procura apresentar aquilo que a Igreja Católica ensina sobre a fé,
+a Bíblia, a Tradição Apostólica, os sacramentos, a liturgia, a moral,
+a história da Igreja, a Virgem Maria, os santos e os principais temas
+de apologética.
+
+</p>
+
+<p>
+
+A Bíblia possui lugar central em todo o conteúdo. Entretanto, a perspectiva
+católica entende a Sagrada Escritura dentro da Tradição Apostólica e da
+interpretação autêntica confiada ao Magistério da Igreja. Por isso,
+as explicações procuram apresentar passagens bíblicas juntamente com
+seu contexto teológico e histórico.
+
+</p>
+
+</div>
+
+<div class="quote">
+
+<strong>Princípio da Theotokos:</strong><br>
+
+Uma pessoa não precisa ser atacada para que uma ideia seja questionada.
+Objeções devem ser respondidas com Bíblia, razão, história e teologia,
+mantendo respeito por quem pensa diferente.
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     CATEGORIAS
+     ====================================================== -->
+
+<section>
+
+<h2 class="section-title">📚 Categorias</h2>
+
+<p class="section-intro">
+
+Explore os principais campos abordados pela Theotokos.
+
+</p>
+
+<div class="grid">
+
+<a class="category-card" href="#fundamentos">
+<span class="category-icon">✝</span>
+<h3>Fundamentos da Fé</h3>
+<p>As bases do catolicismo.</p>
+</a>
+
+<a class="category-card" href="#trindade">
+<span class="category-icon">☦</span>
+<h3>Santíssima Trindade</h3>
+<p>Um Deus em três Pessoas.</p>
+</a>
+
+<a class="category-card" href="#mariologia">
+<span class="category-icon">🌹</span>
+<h3>Mariologia</h3>
+<p>Maria na fé católica.</p>
+</a>
+
+<a class="category-card" href="#sacramentos">
+<span class="category-icon">🍷</span>
+<h3>Sacramentos</h3>
+<p>Os sete sacramentos.</p>
+</a>
+
+<a class="category-card" href="#reforma">
+<span class="category-icon">📜</span>
+<h3>Reforma</h3>
+<p>Reforma Protestante e Católica.</p>
+</a>
+
+<a class="category-card" href="#santos">
+<span class="category-icon">😇</span>
+<h3>Santos</h3>
+<p>Vida e espiritualidade.</p>
+</a>
+
+<a class="category-card" href="#objecoes">
+<span class="category-icon">🛡</span>
+<h3>Apologética</h3>
+<p>Perguntas difíceis e respostas.</p>
+</a>
+
+<a class="category-card" href="#historia">
+<span class="category-icon">🏛</span>
+<h3>História</h3>
+<p>A Igreja através dos séculos.</p>
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     FUNDAMENTOS
+     ====================================================== -->
+
+<section id="fundamentos" class="searchable">
+
+<h2 class="section-title">✝ Fundamentos da Fé Católica</h2>
+
+<p class="section-intro">
+
+O catolicismo entende a fé cristã como resposta do ser humano à revelação
+de Deus em Jesus Cristo. A Igreja conserva essa fé por meio da Escritura,
+da Tradição Apostólica e do Magistério.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Deus</h3>
+
+<p>
+
+A Igreja Católica professa que existe um único Deus, criador do céu e da
+terra, infinitamente bom, eterno, onipotente e perfeito.
+
+</p>
+
+<div class="bible">
+
+<strong>Bíblia:</strong>
+“Eu sou o Senhor, e não há outro.”
+<br>
+Isaías 45,5
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>Jesus Cristo</h3>
+
+<p>
+
+Jesus é verdadeiro Deus e verdadeiro homem. A fé católica ensina que o Filho
+eterno assumiu a natureza humana sem deixar de ser Deus.
+
+</p>
+
+<div class="bible">
+
+<strong>Bíblia:</strong>
+“No princípio era o Verbo... e o Verbo era Deus.”
+<br>
+João 1,1
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>Salvação</h3>
+
+<p>
+
+A salvação é iniciativa da graça de Deus. O ser humano é chamado a responder
+a essa graça pela fé que atua através da caridade, vivendo unido a Cristo.
+
+</p>
+
+<div class="bible">
+
+<strong>Bíblia:</strong>
+“A fé que atua pelo amor.”
+<br>
+Gálatas 5,6
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>A Igreja</h3>
+
+<p>
+
+Cristo não deixou simplesmente indivíduos isolados, mas fundou uma comunidade
+visível, apostólica e sacramental, enviada para anunciar o Evangelho.
+
+</p>
+
+<div class="bible">
+
+<strong>Bíblia:</strong>
+“Tu és Pedro, e sobre esta pedra edificarei a minha Igreja.”
+<br>
+Mateus 16,18
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     TRINDADE
+     ====================================================== -->
+
+<section id="trindade" class="searchable">
+
+<h2 class="section-title">☦ A Santíssima Trindade</h2>
+
+<p class="section-intro">
+
+A Santíssima Trindade é o centro da fé cristã: existe um único Deus em três
+Pessoas realmente distintas — Pai, Filho e Espírito Santo.
+
+</p>
+
+<div class="intro-box">
+
+<h3>Um Deus, três Pessoas</h3>
+
+<p>
+
+A doutrina da Trindade não afirma que existem três deuses. Existe uma única
+natureza divina e três Pessoas divinas: o Pai, o Filho e o Espírito Santo.
+
+O Pai não é o Filho. O Filho não é o Espírito Santo. O Espírito Santo não é
+o Pai. Porém, os três possuem a mesma natureza divina.
+
+</p>
+
+</div>
+
+<div class="trinity-diagram">
+
+<div class="trinity-person">
+
+<strong>Pai</strong>
+<span>É Deus</span>
+
+</div>
+
+<div class="trinity-symbol">+</div>
+
+<div class="trinity-person">
+
+<strong>Filho</strong>
+<span>É Deus</span>
+
+</div>
+
+<div class="trinity-symbol">+</div>
+
+<div class="trinity-person">
+
+<strong>Espírito Santo</strong>
+<span>É Deus</span>
+
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>O Pai é Deus</h3>
+
+<p>
+
+Jesus apresenta o Pai como Deus e ensina os discípulos a rezarem ao Pai.
+
+</p>
+
+<div class="bible">
+<strong>Mateus 6,9:</strong>
+“Pai nosso que estás nos céus...”
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>O Filho é Deus</h3>
+
+<p>
+
+O Evangelho de João identifica o Verbo com Deus e posteriormente afirma que
+o Verbo se fez carne.
+
+</p>
+
+<div class="bible">
+<strong>João 1,1.14:</strong>
+“O Verbo era Deus... e o Verbo se fez carne.”
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>O Espírito Santo é Deus</h3>
+
+<p>
+
+Em Atos, mentir ao Espírito Santo é apresentado como mentir a Deus.
+
+</p>
+
+<div class="bible">
+<strong>Atos 5,3-4:</strong>
+Pedro relaciona a mentira ao Espírito Santo com a mentira a Deus.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>A fórmula trinitária</h3>
+
+<p>
+
+Jesus envia os discípulos para batizar em um único “nome” do Pai, do Filho
+e do Espírito Santo.
+
+</p>
+
+<div class="bible">
+<strong>Mateus 28,19:</strong>
+“Em nome do Pai, do Filho e do Espírito Santo.”
+</div>
+
+</div>
+
+</div>
+
+<div class="quote">
+
+<strong>Santo Agostinho e a Trindade:</strong><br>
+
+Santo Agostinho dedicou uma de suas maiores obras teológicas, <em>De
+Trinitate</em>, à compreensão do mistério trinitário. Ele procurou mostrar
+que a razão pode investigar o mistério, embora não consiga esgotá-lo.
+
+</div>
+
+<div class="quote">
+
+<strong>São Tomás de Aquino:</strong><br>
+
+Na <em>Summa Theologiae</em>, especialmente na Primeira Parte, questões
+27–43, São Tomás analisa as processões, relações e Pessoas divinas.
+Para ele, a distinção entre as Pessoas não significa divisão da essência
+divina.
+
+</div>
+
+<div class="card">
+
+<h3>⚠ Cuidado com analogias</h3>
+
+<p>
+
+Comparações como ovo, água ou sol podem ajudar uma criança a começar a
+imaginar a doutrina, mas nenhuma delas explica perfeitamente a Trindade.
+Algumas podem inclusive transmitir erros teológicos.
+
+A Trindade é um mistério revelado por Deus que ultrapassa nossa capacidade
+de compreender completamente.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     BIBLIA
+     ====================================================== -->
+
+<section id="biblia" class="searchable">
+
+<h2 class="section-title">📖 Bíblia, Tradição e Magistério</h2>
+
+<p class="section-intro">
+
+Para a Igreja Católica, Bíblia, Tradição Apostólica e Magistério não são
+três religiões diferentes. Eles possuem funções distintas e estão unidos
+na transmissão da única Revelação divina.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Sagrada Escritura</h3>
+
+<p>
+
+A Bíblia é verdadeiramente Palavra de Deus escrita sob inspiração do Espírito
+Santo. A Igreja recebe as Escrituras e as proclama como fundamento da fé.
+
+</p>
+
+<div class="bible">
+2 Timóteo 3,16-17
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>Tradição Apostólica</h3>
+
+<p>
+
+Nem tudo aquilo que os Apóstolos ensinaram foi colocado por escrito.
+São Paulo Apóstolo, por exemplo, manda conservar tanto as tradições recebidas
+oralmente quanto as escritas.
+
+</p>
+
+<div class="bible">
+<strong>2 Tessalonicenses 2,15</strong>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>Magistério</h3>
+
+<p>
+
+Cristo confiou à Igreja a missão de ensinar. O Magistério não está acima
+da Palavra de Deus; ele serve à Palavra e a interpreta autenticamente.
+
+</p>
+
+<div class="bible">
+<strong>1 Timóteo 3,15</strong><br>
+“A Igreja do Deus vivo, coluna e sustentáculo da verdade.”
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     MARIOLOGIA
+     ====================================================== -->
+
+<section id="mariologia" class="searchable">
+
+<h2 class="section-title">🌹 Mariologia — Maria na Fé Católica</h2>
+
+<p class="section-intro">
+
+Mariologia é o estudo teológico sobre a Virgem Maria. Para o catolicismo,
+Maria nunca substitui Cristo: toda verdadeira devoção mariana conduz ao
+seu Filho.
+
+</p>
+
+<div class="intro-box">
+
+<h3>Maria aponta para Jesus</h3>
+
+<p>
+
+O exemplo mais claro aparece nas bodas de Caná. Maria percebe a necessidade
+das pessoas e leva a situação a Jesus. Seu conselho resume a atitude da
+verdadeira devoção mariana: fazer aquilo que Cristo disser.
+
+</p>
+
+<div class="bible">
+<strong>João 2,5:</strong>
+“Fazei tudo o que ele vos disser.”
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Theotokos</h3>
+
+<p>
+
+“Theotokos” significa “Mãe de Deus” ou literalmente “Aquela que deu à luz
+a Deus”. O título não significa que Maria seja origem da divindade.
+Significa que aquele que nasceu dela segundo a carne é verdadeiramente
+o Filho de Deus.
+
+</p>
+
+<div class="bible">
+<strong>Lucas 1,43:</strong>
+“Donde me vem que a mãe do meu Senhor me visite?”
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>Maria, cheia de graça</h3>
+
+<p>
+
+O anjo Gabriel saúda Maria de maneira extraordinária, chamando-a
+“cheia de graça”. A Igreja vê nessa saudação uma indicação singular
+da ação da graça divina em Maria.
+
+</p>
+
+<div class="bible">
+<strong>Lucas 1,28</strong>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>Maria, Bem-aventurada</h3>
+
+<p>
+
+Maria profetiza que todas as gerações a chamarão bem-aventurada.
+
+</p>
+
+<div class="bible">
+<strong>Lucas 1,48:</strong>
+“Todas as gerações me chamarão bem-aventurada.”
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>Virgindade de Maria</h3>
+
+<p>
+
+A Igreja professa a virgindade perpétua de Maria. A expressão “irmãos de
+Jesus” encontrada no Novo Testamento deve ser compreendida dentro do
+contexto linguístico e histórico das Escrituras.
+
+</p>
+
+<div class="bible">
+<strong>Mateus 1,25</strong><br>
+<strong>Lucas 1,34</strong>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>Imaculada Conceição</h3>
+
+<p>
+
+A Igreja ensina que Maria, desde o primeiro instante de sua concepção,
+foi preservada do pecado original por uma graça singular de Deus, em
+previsão dos méritos de Cristo.
+
+</p>
+
+<div class="bible">
+<strong>Lucas 1,28</strong><br>
+<strong>Gênesis 3,15</strong>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>Assunção</h3>
+
+<p>
+
+A Igreja professa que Maria foi elevada à glória celeste em corpo e alma.
+A Bíblia não apresenta uma narrativa direta da Assunção, mas a doutrina
+é compreendida à luz da Tradição Apostólica e da esperança cristã na
+ressurreição.
+
+</p>
+
+<div class="bible">
+<strong>Apocalipse 12</strong><br>
+<strong>1 Coríntios 15,20-23</strong>
+</div>
+
+</div>
+
+</div>
+
+<div class="quote">
+
+<strong>Maria não é uma “deusa”:</strong><br>
+
+A Igreja adora somente Deus. Maria recebe uma honra singular porque é a
+Mãe de Jesus Cristo segundo a carne e serva do Senhor. A devoção mariana
+é subordinada à adoração devida exclusivamente à Santíssima Trindade.
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     SACRAMENTOS
+     ====================================================== -->
+
+<section id="sacramentos" class="searchable">
+
+<h2 class="section-title">🍷 Os Sete Sacramentos</h2>
+
+<p class="section-intro">
+
+Os sacramentos são sinais eficazes da graça instituídos por Cristo e
+confiados à Igreja.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Batismo</h3>
+<p>
+Introduz a pessoa na vida cristã e comunica a graça do novo nascimento.
+</p>
+<div class="bible">João 3,5 — “Nascer da água e do Espírito.”</div>
+</div>
+
+<div class="card">
+<h3>Crisma</h3>
+<p>
+A pessoa recebe uma graça especial do Espírito Santo, fortalecendo a graça recebida no Batismo. 
+É um sacramento que fortalece a fé e ajuda o cristão a viver e testemunhar sua fé.
+</p>
+<div class="bible">Atos 8,14-17</div>
+</div>
+
+<div class="card">
+<h3>Eucaristia</h3>
+<p>
+Na Eucaristia, Jesus Cristo está realmente presente, e não apenas de forma simbólica. 
+Pela doutrina da Transubstanciação, na consagração, o pão e o vinho tornam-se verdadeiramente o Corpo e o Sangue de Cristo,
+permanecendo apenas suas aparências de pão e vinho.
+</p>
+<div class="bible">João 6,51-56</div>
+</div>
+
+<div class="card">
+<h3>Confissão</h3>
+<p>
+Cristo confiou aos Apóstolos e seus sucessores a autoridade de perdoar ou reter os pecados. Por meio do sacerdote, 
+a pessoa confessa seus pecados com arrependimento e recebe a absolvição, sendo reconciliado com Deus e com a Igreja.
+</p>
+<div class="bible">João 20,22-23</div>
+</div>
+
+<div class="card">
+<h3>Unção dos Enfermos</h3>
+<p>
+Por meio deste sacramento, a pessoa recebe uma graça especial para enfrentar a doença 
+e, se for da vontade de Deus, também pode receber a cura.
+</p>
+<div class="bible">Tiago 5,14-15</div>
+</div>
+
+<div class="card">
+<h3>Ordem</h3>
+<p>
+O ministério ordenado continua o serviço apostólico dentro da Igreja.
+</p>
+<div class="bible">1 Timóteo 4,14</div>
+</div>
+
+<div class="card">
+<h3>Matrimônio</h3>
+<p>
+O casamento cristão é uma aliança entre homem e mulher elevada por Cristo
+à dignidade de sacramento.
+</p>
+<div class="bible">Efésios 5,25-32</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     EUCARISTIA
+     ====================================================== -->
+
+<section class="searchable">
+
+<h2 class="section-title">🍞 A Eucaristia</h2>
+
+<div class="intro-box">
+
+<h3>“Isto é o meu corpo”</h3>
+
+<p>
+
+A compreensão católica da Eucaristia está profundamente ligada às palavras
+de Jesus na Última Ceia e ao discurso do Pão da Vida.
+
+Cristo não apresenta simplesmente uma lembrança psicológica de sua morte.
+Ele entrega seu Corpo e seu Sangue e manda que seus discípulos façam isso
+em sua memória.
+
+</p>
+
+<div class="bible">
+<strong>Mateus 26,26-28</strong><br>
+“Isto é o meu corpo... isto é o meu sangue.”
+</div>
+
+<div class="bible">
+<strong>João 6,51:</strong><br>
+“O pão que eu darei é a minha carne para a vida do mundo.”
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     SANTOS
+     ====================================================== -->
+
+<section id="santos" class="searchable">
+
+<h2 class="section-title">😇 Santos</h2>
+
+<p class="section-intro">
+
+Os santos são homens e mulheres que testemunharam de maneira extraordinária
+a graça de Deus. A Igreja não ensina que os santos substituem Deus.
+Eles são membros glorificados do Corpo de Cristo.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Intercessão dos santos</h3>
+
+<p>
+
+A Igreja acredita que os santos podem interceder por nós porque continuam
+vivos em Cristo.
+
+</p>
+
+<div class="bible">
+Apocalipse 5,8 apresenta os santos associados às orações dos fiéis.
+</div>
+
+</div>
+
+<div class="card">
+<h3>Comunhão dos Santos</h3>
+
+<p>
+
+A Igreja na terra, as almas que estão sendo purificadas e os santos no céu
+estão unidos em Cristo.
+
+</p>
+
+<div class="bible">
+1 Coríntios 12,12-27
+</div>
+
+</div>
+
+<div class="card">
+<h3>São Tomás de Aquino</h3>
+
+<p>
+
+Grande teólogo e Doutor da Igreja. Sua <em>Summa Theologiae</em> é uma das
+maiores sínteses da teologia católica medieval.
+
+</p>
+
+</div>
+
+<div class="card">
+<h3>Santo Agostinho</h3>
+
+<p>
+
+Bispo de Hipona e um dos principais Padres da Igreja. Escreveu sobre graça,
+Igreja, Escritura, Trindade e muitos outros temas fundamentais.
+
+</p>
+
+</div>
+
+<div class="card">
+<h3>Santa Teresa d'Ávila</h3>
+
+<p>
+
+Grande mística, escritora e reformadora do Carmelo. Tornou-se Doutora
+da Igreja e promoveu uma profunda renovação espiritual.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     REFORMA PROTESTANTE
+     ====================================================== -->
+
+<section id="reforma" class="searchable">
+
+<h2 class="section-title">📜 A Reforma Protestante</h2>
+
+<p class="section-intro">
+
+A Reforma Protestante foi um complexo processo religioso, teológico,
+político e social do século XVI. Não pode ser reduzido a uma única causa
+ou a uma única pessoa.
+
+</p>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-year">Século XV</div>
+
+<p>
+
+A imprensa de tipos móveis facilita a circulação de livros e ideias.
+Ao mesmo tempo, existiam problemas reais na vida de parte do clero,
+abusos disciplinares e fortes debates sobre a necessidade de reforma.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">1517</div>
+
+<p>
+
+Martinho Lutero publica suas famosas 95 Teses, originalmente relacionadas
+especialmente à questão das indulgências. O movimento posteriormente
+assumiria dimensões teológicas muito maiores.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">1521</div>
+
+<p>
+
+Lutero comparece à Dieta de Worms e o conflito com a autoridade eclesial
+se aprofunda.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">Século XVI</div>
+
+<p>
+
+Outros reformadores, como Ulrico Zuínglio e João Calvino, desenvolvem
+suas próprias formulações teológicas. Na Inglaterra, ocorre outro processo
+complexo ligado ao reinado de Henrique VIII.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">1545–1563</div>
+
+<p>
+
+O Concílio de Trento responde às controvérsias doutrinais e promove
+uma profunda reforma da disciplina e da formação do clero.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>A resposta católica</h3>
+
+<p>
+
+A Igreja Católica reconheceu a necessidade de reforma, mas entendeu que
+a solução não era abandonar sua identidade sacramental e apostólica.
+
+O Concílio de Trento esclareceu questões sobre justificação, sacramentos,
+Eucaristia, sacerdócio, Escritura e Tradição, além de promover reformas
+disciplinares.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     SANTA TERESA D'ÁVILA
+     ====================================================== -->
+
+<section class="searchable">
+
+<h2 class="section-title">🌹 Santa Teresa d'Ávila: reformar sem romper</h2>
+
+<div class="intro-box">
+
+<h3>Uma reforma dentro da Igreja</h3>
+
+<p>
+
+Santa Teresa d'Ávila foi uma grande reformadora do século XVI. Entretanto,
+sua reforma aconteceu dentro da própria Igreja Católica.
+
+Ela procurou renovar a vida carmelita, especialmente através da oração,
+da pobreza, da vida comunitária e do retorno à observância mais rigorosa
+da Regra.
+
+</p>
+
+<p>
+
+Santa Teresa d'Ávila não criou uma nova comunidade cristã separada da Igreja Católica.
+Sua reforma foi reconhecida e desenvolvida dentro da estrutura eclesial,
+com aprovação eclesiástica.
+
+</p>
+
+</div>
+
+<div class="quote">
+
+<strong>Um contraste histórico importante:</strong><br>
+
+Lutero iniciou um movimento de reforma que acabou conduzindo à formação
+de comunidades cristãs separadas da comunhão com Roma. Santa Teresa, por
+outro lado, promoveu uma reforma interna da vida religiosa católica,
+permanecendo em comunhão com a Igreja.
+
+Isso não significa reduzir toda a história da Reforma a “Santa Teresa d'Ávila boa e 
+Martinho Lutero mau”. Os dois processos possuem contextos, problemas e consequências
+históricas complexas.
+
+</div>
+
+<div class="card">
+
+<h3>Santa Teresa d'Ávila e a Igreja</h3>
+
+<p>
+
+Santa Teresa d'Ávila possuía profundo amor pela Igreja e desejava que sua vida
+espiritual contribuísse para sua renovação. Sua reforma não nasceu do
+desejo de abandonar a Igreja, mas do desejo de servi-la melhor.
+
+Ela morreu afirmando seu pertencimento à Igreja Católica.
+
+</p>
+
+<div class="bible">
+
+<strong>Efésios 4,4-5:</strong><br>
+“Um só corpo e um só Espírito... uma só fé, um só batismo.”
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     OBJEÇÕES PROTESTANTES
+     ====================================================== -->
+
+<section id="objecoes" class="searchable">
+
+<h2 class="section-title">🛡 Objeções Protestantes e Respostas Católicas</h2>
+
+<p class="section-intro">
+
+As respostas abaixo apresentam argumentos comuns encontrados em debates
+entre católicos e protestantes. O protestantismo é muito diversificado:
+nem todos os protestantes defendem exatamente as mesmas posições.
+
+</p>
+
+
+<div class="objection">
+
+<div class="objection-title">
+1. “A Bíblia é a única autoridade infalível.”
+</div>
+
+<div class="objection-content">
+
+<strong>Objeção:</strong>
+
+<p>
+
+Se tudo que precisamos saber está na Bíblia, por que precisaríamos
+de Tradição ou Magistério?
+
+</p>
+
+<strong>Resposta:</strong>
+
+<p>
+
+A Bíblia nunca apresenta a fórmula “somente a Bíblia” como princípio
+formal da autoridade cristã. Pelo contrário, São Paulo manda conservar
+as tradições recebidas oralmente e por escrito.
+
+</p>
+
+<div class="bible">
+
+2 Tessalonicenses 2,15<br>
+1 Coríntios 11,2<br>
+2 Timóteo 2,2
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+2. “Tu és Pedro” não prova o papado.
+</div>
+
+<div class="objection-content">
+
+<strong>Objeção:</strong>
+
+<p>
+
+A bíblia foi escrita em grego. Então podemos usar a diferença entre
+‘Pedro’ e ‘pedra’ existente em algumas traduções gregas para desmentir
+o papado.
+
+</p>
+
+<strong>Resposta:</strong>
+
+<p>
+
+Jesus falava em aramaico no cotidiano.
+
+</p>
+
+<p>
+
+Em Mateus 16,18, Jesus dá a Simão um novo nome relacionado à pedra.
+O texto grego usa <em>Petros</em> e <em>petra</em>, mas essa diferença
+gramatical não significa necessariamente que Jesus estivesse fazendo
+um contraste entre “Pedro” e “pedra”.
+
+Se a fala original foi aramaica, a tradução linguística seria apenas <em>Kepha</em>, usada tanto para o nome
+quanto para “rocha/pedra”.
+
+</p>
+
+<p>
+
+Além disso, não devemos interpretar Mateus 16,18 isoladamente. Logo
+depois, Jesus entrega a Pedro as chaves do Reino e fala sobre ligar
+e desligar.
+
+</p>
+
+<div class="bible">
+
+<strong>Mateus 16,18-19:</strong><br>
+“Tu és Pedro, e sobre esta pedra edificarei a minha Igreja...”
+<br><br>
+
+<strong>Lucas 22,31-32:</strong><br>
+Jesus reza especialmente por Pedro e manda que ele confirme seus irmãos.
+
+</div>
+
+<p>
+
+A interpretação católica, portanto, não depende exclusivamente de uma
+diferença entre palavras gregas. Ela considera o nome em aramaico dado a Pedro,
+as chaves, o poder de ligar e desligar e seu papel particular entre os
+Apóstolos.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+3. “Católicos adoram Maria.”
+</div>
+
+<div class="objection-content">
+
+<strong>Resposta:</strong>
+
+<p>
+
+A doutrina católica distingue adoração, que pertence exclusivamente a Deus,
+da veneração prestada aos santos e da honra singular prestada à Virgem Maria.
+
+Maria nunca é colocada no lugar de Deus.
+
+</p>
+
+<div class="bible">
+Lucas 1,46-49
+</div>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+4. “Os santos estão mortos e não podem ouvir nossas orações.”
+</div>
+
+<div class="objection-content">
+
+<strong>Resposta:</strong>
+
+<p>
+
+Jesus ensina que Deus é Deus de vivos. A comunhão dos santos também
+é apresentada em Apocalipse associada às orações.
+
+</p>
+
+<div class="bible">
+Lucas 20,37-38<br>
+Apocalipse 5,8
+</div>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+5. “Imagens católicas são idolatria.”
+</div>
+
+<div class="objection-content">
+
+<strong>Resposta:</strong>
+
+<p>
+
+A Bíblia condena a adoração de imagens como deuses. Entretanto, ela não
+proíbe toda representação visual.
+
+Deus mesmo mandou fazer querubins para a Arca da Aliança.
+
+</p>
+
+<div class="bible">
+Êxodo 25,18-20<br>
+Números 21,8-9
+</div>
+
+<p>
+
+O problema não é simplesmente existir uma imagem. O problema é tratar
+uma criatura como se fosse Deus.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+6. “O purgatório não aparece na Bíblia.”
+</div>
+
+<div class="objection-content">
+
+<strong>Resposta:</strong>
+
+<p>
+
+A palavra “purgatório” não aparece literalmente na Bíblia, assim como
+muitas palavras teológicas usadas pelos cristãos não aparecem literalmente.
+A questão é saber se a realidade descrita pela doutrina possui fundamento.
+
+</p>
+
+<p>
+
+A Igreja relaciona o tema à purificação após a morte e à possibilidade
+de oração pelos falecidos.
+
+</p>
+
+<div class="bible">
+2 Macabeus 12,44-46<br>
+1 Coríntios 3,13-15<br>
+Mateus 12,32
+</div>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+7. “A Eucaristia é apenas simbólica.”
+</div>
+
+<div class="objection-content">
+
+<strong>Resposta:</strong>
+
+<p>
+
+Jesus utiliza linguagem extremamente forte em João 6, especialmente
+quando afirma que sua carne é verdadeira comida e seu sangue verdadeira
+bebida. Na Última Ceia, também diz “isto é o meu corpo”.
+
+</p>
+
+<div class="bible">
+João 6,51-56<br>
+Mateus 26,26-28<br>
+1 Coríntios 10,16
+</div>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+8. “Confessar pecados a um sacerdote não é bíblico.”
+</div>
+
+<div class="objection-content">
+
+<strong>Resposta:</strong>
+
+<p>
+
+Depois da ressurreição, Jesus sopra sobre os Apóstolos e afirma que eles
+podem perdoar ou reter pecados. Isso apresenta uma autoridade ministerial
+real.
+
+</p>
+
+<div class="bible">
+João 20,21-23<br>
+Tiago 5,16
+</div>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+9. “Pedro nunca foi líder da Igreja.”
+</div>
+
+<div class="objection-content">
+
+<strong>Resposta:</strong>
+
+<p>
+
+Pedro aparece frequentemente em primeiro lugar nas listas dos Apóstolos,
+recebe as chaves em Mateus 16 e recebe de Cristo uma missão especial
+de confirmar os irmãos.
+
+</p>
+
+<div class="bible">
+Mateus 16,18-19<br>
+Lucas 22,31-32<br>
+João 21,15-17
+</div>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+10. “A Igreja Católica foi criada por Constantino.”
+</div>
+
+<div class="objection-content">
+
+<strong>Resposta:</strong>
+
+<p>
+
+Constantino teve enorme importância na história do cristianismo do século
+IV, mas isso não significa que tenha criado a Igreja Católica.
+
+Há testemunhos cristãos anteriores a Constantino sobre bispos, Eucaristia,
+sucessão apostólica, martírio e estrutura eclesial.
+
+</p>
+
+<div class="bible">
+Atos 2,42<br>
+Atos 20,28<br>
+1 Timóteo 3,1-13
+</div>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+11. “A salvação é somente pela fé.”
+</div>
+
+<div class="objection-content">
+
+<strong>Resposta:</strong>
+
+<p>
+
+A Igreja concorda que ninguém consegue comprar ou merecer inicialmente
+a graça da salvação. A graça é dom de Deus.
+
+Porém, a Bíblia também ensina que a fé verdadeira atua através da caridade
+e que o ser humano será julgado também por suas obras.
+
+</p>
+
+<div class="bible">
+Efésios 2,8-10<br>
+Gálatas 5,6<br>
+Tiago 2,14-26<br>
+Mateus 25,31-46
+</div>
+
+<p>
+
+Portanto, a posição católica não é “salvar-se comprando Deus com obras”.
+É a graça de Deus que transforma a pessoa e produz frutos.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+12. “O celibato prova que a Igreja Católica é antibíblica.”
+</div>
+
+<div class="objection-content">
+
+<strong>Resposta:</strong>
+
+<p>
+
+O celibato sacerdotal no rito latino é uma disciplina eclesiástica,
+não um dogma de que todo sacerdote cristão deve necessariamente ser
+celibatário.
+
+A própria Bíblia apresenta tanto o matrimônio como a possibilidade de
+renunciar ao casamento pelo Reino de Deus.
+
+</p>
+
+<div class="bible">
+Mateus 19,12<br>
+1 Coríntios 7,32-35
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     OBJEÇÕES ATEÍSTAS
+     ====================================================== -->
+
+<section class="searchable">
+
+<h2 class="section-title">🧠 Objeções Filosóficas e Ateístas</h2>
+
+<div class="objection">
+
+<div class="objection-title">
+“Se Deus existe, por que existe sofrimento?”
+</div>
+
+<div class="objection-content">
+
+<strong>Resposta:</strong>
+
+<p>
+
+O problema do sofrimento é uma das objeções mais profundas contra a
+crença em Deus. O catolicismo não responde simplesmente dizendo que
+sofrimento é “bom”.
+
+A fé cristã afirma que Deus entrou na história e assumiu o sofrimento
+humano na pessoa de Cristo.
+
+</p>
+
+<div class="bible">
+Romanos 8,18-23<br>
+Romanos 5,3-5<br>
+João 16,33
+</div>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+“Quem criou Deus?”
+</div>
+
+<div class="objection-content">
+
+<p>
+
+O argumento parte da ideia de que tudo precisa ter uma causa. Porém,
+a doutrina clássica cristã não afirma que tudo possui uma causa.
+Afirma que aquilo que começa a existir necessita de uma causa.
+
+Deus é entendido como eterno e não causado.
+
+São Tomás de Aquino desenvolveu argumentos filosóficos relacionados
+à causalidade, contingência e movimento.
+
+</p>
+
+<div class="bible">
+Êxodo 3,14<br>
+Salmo 90,2
+</div>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+“A ciência tornou Deus desnecessário.”
+</div>
+
+<div class="objection-content">
+
+<p>
+
+A ciência procura explicar fenômenos naturais através de métodos
+empíricos. A pergunta filosófica sobre por que existe algo em vez de
+nada, ou por que existem leis naturais inteligíveis, pertence a outro
+nível de investigação.
+
+A fé católica não exige rejeitar a ciência.
+
+</p>
+
+<div class="bible">
+Sabedoria 13,1-5
+</div>
+
+</div>
+
+</div>
+
+
+<div class="objection">
+
+<div class="objection-title">
+“A religião é apenas uma muleta psicológica.”
+</div>
+
+<div class="objection-content">
+
+<p>
+
+Uma pessoa pode usar a religião de maneira psicológica ou emocional,
+mas isso não demonstra que Deus não exista.
+
+É necessário distinguir uma explicação psicológica para a crença de
+uma refutação daquilo em que se acredita.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     HISTORIA
+     ====================================================== -->
+
+<section id="historia" class="searchable">
+
+<h2 class="section-title">🏛 História da Igreja</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-year">c. 30–33</div>
+
+<p>
+Paixão, morte e ressurreição de Jesus Cristo.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">Pentecostes</div>
+
+<p>
+O Espírito Santo desce sobre os discípulos e a missão pública da Igreja
+se manifesta de maneira decisiva.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">Séculos I–III</div>
+
+<p>
+Expansão do cristianismo, perseguições e testemunho dos mártires.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">325</div>
+
+<p>
+Concílio de Niceia e profissão da fé na divindade do Filho.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">381</div>
+
+<p>
+Concílio de Constantinopla reafirma a fé na divindade do Espírito Santo.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">1054</div>
+
+<p>
+O cisma entre Oriente e Ocidente se consolida historicamente.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">1517</div>
+
+<p>
+Início simbólico da Reforma Protestante com as 95 Teses de Lutero.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">1545–1563</div>
+
+<p>
+Concílio de Trento.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">1562</div>
+
+<p>
+Santa Teresa d'Ávila funda o primeiro Carmelo reformado em Ávila.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">1568</div>
+
+<p>
+Surge o primeiro convento masculino dos Carmelitas Descalços.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     COMPARAÇÃO
+     ====================================================== -->
+
+<section class="searchable">
+
+<h2 class="section-title">⚖ Catolicismo e Protestantismo</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Tema</th>
+<th>Perspectiva Católica</th>
+<th>Perspectivas Protestantes</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Autoridade</td>
+<td>Escritura, Tradição Apostólica e Magistério</td>
+<td>Varia conforme a tradição; muitas adotam sola Scriptura</td>
+</tr>
+
+<tr>
+<td>Justificação</td>
+<td>Graça de Deus recebida pela fé e vivida na caridade</td>
+<td>Formulações variam; muitas enfatizam sola fide</td>
+</tr>
+
+<tr>
+<td>Eucaristia</td>
+<td>Presença real de Cristo</td>
+<td>Varia entre denominações</td>
+</tr>
+
+<tr>
+<td>Maria</td>
+<td>Mãe de Deus, sempre Virgem, Imaculada e Assunta</td>
+<td>Varia bastante conforme a tradição</td>
+</tr>
+
+<tr>
+<td>Santos</td>
+<td>Intercessão e comunhão dos santos</td>
+<td>Geralmente não há invocação dos santos</td>
+</tr>
+
+<tr>
+<td>Papa</td>
+<td>Sucessor de Pedro e princípio visível de unidade</td>
+<td>Não reconhecido como autoridade universal</td>
+</tr>
+
+<tr>
+<td>Sacramentos</td>
+<td>Sete sacramentos</td>
+<td>Normalmente dois sacramentos/ordenanças reconhecidos</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     PADRES DA IGREJA
+     ====================================================== -->
+
+<section class="searchable">
+
+<h2 class="section-title">📜 Alguns Doutores da Igreja</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Santo Agostinho</h3>
+
+<p>
+
+Agostinho foi um dos grandes pensadores cristãos dos primeiros séculos.
+Sua obra <em>De Trinitate</em> investiga profundamente o mistério do Pai,
+do Filho e do Espírito Santo.
+
+Também escreveu sobre graça, pecado, Igreja, sacramentos e interpretação
+da Escritura.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>São Tomás de Aquino</h3>
+
+<p>
+
+São Tomás de Aquino buscou integrar fé e razão. Sua teologia utiliza fortemente a
+filosofia de Aristóteles, sem reduzir a fé à filosofia.
+
+Na <em>Summa Theologiae</em>, aborda Deus, Trindade, criação, Cristo,
+sacramentos, virtudes, moral e vida eterna.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Santa Teresa d'Ávila</h3>
+
+<p>
+
+Santa Teresa d'Ávila foi uma grande mestra da oração interior. Seus escritos, como
+<em>O Livro da Vida</em>, <em>Caminho de Perfeição</em> e
+<em>Castelo Interior</em>, são clássicos da espiritualidade católica.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     PERGUNTAS FREQUENTES
+     ====================================================== -->
+
+<section class="searchable">
+
+<h2 class="section-title">❓ Perguntas Frequentes</h2>
+
+<details>
+<summary>Católicos adoram santos?</summary>
+<p>
+Não. A adoração é reservada exclusivamente a Deus. Os santos são honrados
+como amigos e servos de Deus.
+</p>
+</details>
+
+<details>
+<summary>Maria é uma deusa?</summary>
+<p>
+Não. Maria é criatura e serva de Deus. Sua grandeza está justamente
+naquilo que Deus realizou nela.
+</p>
+</details>
+
+<details>
+<summary>O Papa pode errar?</summary>
+<p>
+O Papa é humano e pode cometer erros pessoais. A infalibilidade papal
+é uma doutrina muito específica relacionada a determinadas condições
+de ensino sobre fé e moral.
+</p>
+</details>
+
+<details>
+<summary>A Igreja Católica acredita na Bíblia?</summary>
+<p>
+Sim. A Igreja considera a Bíblia inspirada por Deus e fundamental para
+a vida cristã.
+</p>
+</details>
+
+<details>
+<summary>Católicos acreditam que a fé não importa?</summary>
+<p>
+Não. A fé é absolutamente fundamental. A diferença está em entender que
+a fé verdadeira não permanece estéril, mas produz frutos de caridade.
+</p>
+</details>
+
+<details>
+<summary>Por que a Igreja tem tantas tradições?</summary>
+<p>
+Porque a fé cristã foi transmitida não somente por textos escritos,
+mas também pela Tradição Apostólica.
+</p>
+</details>
+
+</section>
+
+
+<!-- ======================================================
+     CONVERSÃO
+     ====================================================== -->
+
+<section class="searchable">
+
+<h2 class="section-title">⛪ Para quem deseja conhecer o Catolicismo</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>1. Leia os Evangelhos</h3>
+
+<p>
+
+Comece por Mateus, Marcos, Lucas e João. Observe especialmente o que
+Jesus diz sobre a Igreja, os sacramentos, Pedro, a Eucaristia e a vida
+eterna.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>2. Leia o Catecismo</h3>
+
+<p>
+
+O Catecismo apresenta de maneira organizada a fé que a Igreja recebeu
+e ensina.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>3. Conheça a Santa Missa</h3>
+
+<p>
+
+A liturgia é o centro da vida sacramental católica. Participar dela
+ajuda a compreender a fé de maneira prática.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>4. Converse com um sacerdote</h3>
+
+<p>
+
+Questões importantes sobre conversão, sacramentos e vida espiritual
+podem ser acompanhadas pessoalmente por um sacerdote.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     FONTES
+     ====================================================== -->
+
+<section id="fontes">
+
+<h2 class="section-title">📚 Fontes confiáveis para estudo</h2>
+
+<p class="section-intro">
+
+A Theotokos procura utilizar fontes católicas confiáveis para que o leitor
+possa continuar seus estudos diretamente nas páginas oficiais ou em
+edições reconhecidas da Igreja.
+
+</p>
+
+<div class="grid">
+
+
+<!-- BÍBLIA CNBB -->
+
+<div class="card">
+
+<h3>📖 Bíblia da CNBB</h3>
+
+<p>
+
+A Bíblia da Conferência Nacional dos Bispos do Brasil é a tradução oficial
+de referência para a Igreja no Brasil. Sua tradução considera os textos
+originais hebraicos, aramaicos e gregos e os compara com a Nova Vulgata.
+
+</p>
+
+<p>
+
+É uma das principais opções para quem deseja ler a Bíblia em português
+dentro do contexto católico brasileiro.
+
+</p>
+
+<p>
+
+<a
+href="https://www.cnbb.org.br/"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#8e1010;font-weight:bold;"
+>
+
+🔗 Acessar o site oficial da CNBB
+
+</a>
+
+</p>
+
+</div>
+
+
+<!-- BÍBLIA AVE MARIA -->
+
+<div class="card">
+
+<h3>📖 Bíblia Ave-Maria</h3>
+
+<p>
+
+A Bíblia Ave-Maria é uma conhecida edição católica em português.
+Sua tradução foi realizada a partir dos originais hebraico, grego e
+aramaico pelos monges beneditinos de Maredsous, na Bélgica.
+
+</p>
+
+<p>
+
+Ela também possui notas, referências e recursos que podem ajudar no estudo
+da Sagrada Escritura.
+
+</p>
+
+<p>
+
+<a
+href="https://www.loja.paulus.com.br/biblia-sagrada-ave-maria-edicao-de-estudos/p"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#8e1010;font-weight:bold;"
+>
+
+🔗 Conhecer a Bíblia Ave-Maria — Paulus
+
+</a>
+
+</p>
+
+</div>
+
+
+<!-- BÍBLIA CATÓLICA ONLINE -->
+
+<div class="card">
+
+<h3>📖 Bíblia Ave-Maria Online</h3>
+
+<p>
+
+Para quem deseja ler a Bíblia diretamente pelo navegador, esta página
+disponibiliza o texto da Bíblia Ave-Maria online.
+
+</p>
+
+<p>
+
+A versão apresentada é identificada como <strong>Bíblia Ave Maria</strong>,
+permitindo consultar os livros e capítulos sem precisar instalar nenhum
+programa.
+
+</p>
+
+<p>
+
+<a
+href="https://www.bibliacatolica.com.br/biblia-ave-maria/"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#8e1010;font-weight:bold;"
+>
+
+🔗 Ler a Bíblia Ave-Maria Online
+
+</a>
+
+</p>
+
+</div>
+
+
+<!-- VATICANO -->
+
+<div class="card">
+
+<h3>🇻🇦 Santa Sé — Vaticano</h3>
+
+<p>
+
+O site oficial da Santa Sé reúne documentos do Magistério, discursos dos
+Papas, documentos dos Concílios, Catecismo, textos litúrgicos e diversos
+documentos oficiais da Igreja Católica.
+
+</p>
+
+<p>
+
+É uma das principais fontes utilizadas pela Theotokos para conferir
+ensinamentos oficiais da Igreja.
+
+</p>
+
+<p>
+
+<a
+href="https://www.vatican.va/content/vatican/pt.html"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#8e1010;font-weight:bold;"
+>
+
+🔗 Acessar o site oficial do Vaticano
+
+</a>
+
+</p>
+
+</div>
+
+
+<!-- CATECISMO -->
+
+<div class="card">
+
+<h3>📜 Catecismo da Igreja Católica</h3>
+
+<p>
+
+O Catecismo apresenta de maneira sistemática a fé católica, abordando
+a profissão de fé, os sacramentos, a vida moral e a oração.
+
+</p>
+
+<p>
+
+É uma das principais referências doutrinais da Theotokos.
+
+</p>
+
+<p>
+
+<a
+href="https://www.vatican.va/archive/cathechism_po/index_new/p1s1c2_50-141_po.html"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#8e1010;font-weight:bold;"
+>
+
+🔗 Ler o Catecismo no site do Vaticano
+
+</a>
+
+</p>
+
+</div>
+
+
+<!-- DEI VERBUM -->
+
+<div class="card">
+
+<h3>📜 Dei Verbum</h3>
+
+<p>
+
+A Constituição Dogmática <em>Dei Verbum</em>, do Concílio Vaticano II,
+explica a Revelação Divina, a inspiração da Bíblia, a interpretação das
+Sagradas Escrituras e a relação entre Escritura e Tradição.
+
+</p>
+
+<p>
+
+É especialmente importante para compreender a posição católica sobre
+a autoridade da Bíblia.
+
+</p>
+
+<p>
+
+<a
+href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_po.html"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#8e1010;font-weight:bold;"
+>
+
+🔗 Ler a Dei Verbum no Vaticano
+
+</a>
+
+</p>
+
+</div>
+
+
+<!-- SANTO AGOSTINHO -->
+
+<div class="card">
+
+<h3>📚 Santo Agostinho — De Trinitate</h3>
+
+<p>
+
+A obra <em>De Trinitate</em> é um dos grandes clássicos da teologia cristã
+sobre o mistério da Santíssima Trindade.
+
+</p>
+
+<p>
+
+É especialmente recomendada para quem deseja aprofundar a teologia
+trinitária e conhecer o pensamento de um dos maiores Padres da Igreja.
+
+</p>
+
+<p>
+
+<a
+href="https://www.vatican.va/content/vatican/pt.html"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#8e1010;font-weight:bold;"
+>
+
+🔗 Portal oficial da Santa Sé
+
+</a>
+
+</p>
+
+</div>
+
+
+<!-- SÃO TOMÁS DE AQUINO -->
+
+<div class="card">
+
+<h3>📚 São Tomás de Aquino — Summa Theologiae</h3>
+
+<p>
+
+A <em>Summa Theologiae</em> é uma das maiores obras da teologia católica.
+São Tomás aborda Deus, a Trindade, criação, Cristo, sacramentos,
+virtudes, moral e vida eterna.
+
+</p>
+
+<p>
+
+Para o estudo da Trindade, são especialmente importantes as questões
+27 a 43 da Primeira Parte.
+
+</p>
+
+<p>
+
+<a
+href="https://www.vatican.va/content/vatican/pt.html"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#8e1010;font-weight:bold;"
+>
+
+🔗 Portal oficial da Santa Sé
+
+</a>
+
+</p>
+
+</div>
+
+
+<!-- SANTA TERESA D'ÁVILA -->
+
+<div class="card">
+
+<h3>🌹 Santa Teresa d'Ávila</h3>
+
+<p>
+
+Para estudar Santa Teresa d'Ávila, recomenda-se conhecer suas obras espirituais,
+como <em>Livro da Vida</em>, <em>Caminho de Perfeição</em> e
+<em>Castelo Interior</em>.
+
+</p>
+
+<p>
+
+Ela é especialmente importante para compreender a reforma do Carmelo
+realizada dentro da própria Igreja Católica.
+
+</p>
+
+<p>
+
+<a
+href="https://www.vatican.va/content/benedict-xvi/pt/audiences/2011/documents/hf_ben-xvi_aud_20110202.html"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#8e1010;font-weight:bold;"
+>
+
+🔗 Catequese de Bento XVI sobre Santa Teresa d'Ávila
+
+</a>
+
+</p>
+
+</div>
+
+
+<!-- CONCÍLIO DE TRENTO -->
+
+<div class="card">
+
+<h3>🏛 Concílio de Trento</h3>
+
+<p>
+
+O Concílio de Trento é uma fonte fundamental para compreender a resposta
+católica às controvérsias da Reforma Protestante, especialmente nos temas
+da justificação, sacramentos e Eucaristia.
+
+</p>
+
+<p>
+
+<a
+href="https://www.vatican.va/content/vatican/pt.html"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#8e1010;font-weight:bold;"
+>
+
+🔗 Documentos da Santa Sé
+
+</a>
+
+</p>
+
+</div>
+
+
+<!-- VATICANO II -->
+
+<div class="card">
+
+<h3>⛪ Concílio Vaticano II</h3>
+
+<p>
+
+Os documentos do Concílio Vaticano II são fundamentais para compreender
+a Igreja Católica contemporânea, incluindo sua visão sobre Revelação,
+Igreja, liturgia e ecumenismo.
+
+</p>
+
+<p>
+
+<a
+href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/index_po.htm"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#8e1010;font-weight:bold;"
+>
+
+🔗 Documentos do Concílio Vaticano II
+
+</a>
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="quote">
+
+<strong>📖 Observação sobre a Bíblia utilizada na Theotokos:</strong><br>
+
+As referências bíblicas desta wiki devem ser entendidas dentro da tradição
+católica. Para leitura em português, recomenda-se especialmente a
+<strong>Bíblia da CNBB</strong> e a <strong>Bíblia Ave-Maria.</strong>
+A Igreja Católica reconhece a Sagrada Escritura como Palavra de Deus
+inspirada e a lê em conjunto com a Tradição viva da Igreja.
+
+</div>
+
+
+<div class="intro-box">
+
+<h3>🔎 Fontes oficiais e fontes de estudo</h3>
+
+<p>
+
+Quando possível, a Theotokos dá preferência a documentos diretamente
+publicados pela <strong>Santa Sé</strong>, pela <strong>CNBB</strong> e por
+editoras católicas reconhecidas.
+
+</p>
+
+<p>
+
+Isso permite que o visitante não precise simplesmente confiar no que a
+wiki afirma: ele pode clicar nas referências e consultar diretamente
+os documentos e materiais utilizados para estudar determinado assunto.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ======================================================
+     CONCLUSÃO
+     ====================================================== -->
+
+<section>
+
+<div class="intro-box">
+
+<h3>Uma fé para conhecer, viver e aprofundar</h3>
+
+<p>
+
+A fé católica não é apenas um conjunto de respostas para debates.
+Ela pretende conduzir a pessoa a um encontro com Jesus Cristo e a uma
+vida transformada pela graça.
+
+A Bíblia, a Tradição, os sacramentos, a oração, a vida dos santos e o
+ensinamento da Igreja formam um conjunto que deve ser estudado de maneira
+integrada.
+
+</p>
+
+<div class="quote">
+
+<strong>“Senhor, a quem iremos? Tu tens palavras de vida eterna.”</strong>
+
+<br>
+
+João 6,68
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- ======================================================
+     FOOTER
+     ====================================================== -->
+
+<footer>
+
+<h2>✝ Theotokos — Wiki Católica</h2>
+
+<p>
+Feito com carinho sem fins lucrativos por Kauã Farias.
+</p>
+
+<p>
+Uma iniciativa de estudo e formação sobre a fé católica.
+</p>
+
+<div class="footer-author">
+Kauã Farias • 2026
+</div>
+
+</footer>
+
+
+<!-- ======================================================
+     BOTÃO VOLTAR AO TOPO
+     ====================================================== -->
+
+<button id="topButton" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+↑
+</button>
+
+
+<!-- ======================================================
+     JAVASCRIPT
+     ====================================================== -->
+
+<script>
+
+/* =========================================================
+   PESQUISA
+   ========================================================= */
+
+function searchSite(){
+
+    const input =
+        document.getElementById("searchInput");
+
+    const query =
+        input.value.toLowerCase().trim();
+
+    const elements =
+        document.querySelectorAll(".searchable");
+
+    let found = 0;
+
+    if(query === ""){
+
+        elements.forEach(function(element){
+
+            element.classList.remove("hidden");
+
+        });
+
+        document.getElementById("searchInfo").innerHTML = "";
+
+        return;
+    }
+
+    elements.forEach(function(element){
+
+        const text =
+            element.innerText.toLowerCase();
+
+        if(text.includes(query)){
+
+            element.classList.remove("hidden");
+
+            found++;
+
+        }else{
+
+            element.classList.add("hidden");
+
+        }
+
+    });
+
+    const info =
+        document.getElementById("searchInfo");
+
+    if(found === 0){
+
+        info.innerHTML =
+            "Nenhum conteúdo encontrado para: <strong>"
+            + query +
+            "</strong>";
+
+    }else{
+
+        info.innerHTML =
+            found +
+            " seção(ões) encontrada(s) para: <strong>"
+            + query +
+            "</strong>";
+
+    }
+
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR AO TOPO
+   ========================================================= */
+
+window.addEventListener("scroll", function(){
+
+    const button =
+        document.getElementById("topButton");
+
+    if(window.scrollY > 500){
+
+        button.style.display = "block";
+
+    }else{
+
+        button.style.display = "none";
+
+    }
+
+});
+
+
+/* =========================================================
+   ENTER NA PESQUISA
+   ========================================================= */
+
+document
+.getElementById("searchInput")
+.addEventListener("keydown", function(event){
+
+    if(event.key === "Enter"){
+
+        searchSite();
+
+    }
+
+});
+
+
+/* =========================================================
+   MENU MOBILE / RESPONSIVO
+   ========================================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", function() {
+        navMenu.classList.toggle("nav-active");
+    });
+
+    navMenu.querySelectorAll("a").forEach(function(link) {
+        link.addEventListener("click", function() {
+            navMenu.classList.remove("nav-active");
+        });
+    });
+}
+
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Theotokos — Wiki Católica</title>
+
+<meta name="description" content="Theotokos — Wiki Católica: Bíblia, Tradição, Magistério, Mariologia, Sacramentos, Reforma Protestante, Santos e Apologética Católica.">
+
+<style>
+
+/* =========================================================
+   THEOTOKOS — WIKI CATÓLICA
+   REDESIGN PREMIUM: VERMELHO + DOURADO + BRANCO
+   ========================================================= */
+
+:root {
+    --vermelho: #8e1010;
+    --vermelho-escuro: #570707;
+    --vermelho-claro: #b51d1d;
+    --dourado: #d6a21f;
+    --dourado-claro: #f1cf67;
+    --branco: #ffffff;
+    --creme: #fffaf0;
+    --creme-2: #f8efd9;
+    --texto: #2f2019;
+    --texto-suave: #66554b;
+    --borda: #ead8ae;
+    --sombra: 0 12px 30px -5px rgba(87, 7, 7, 0.12), 0 8px 12px -6px rgba(87, 7, 7, 0.06);
+    --sombra-forte: 0 25px 45px -10px rgba(87, 7, 7, 0.25), 0 15px 20px -8px rgba(87, 7, 7, 0.12);
+    --fonte-titulo: "Palatino Linotype", "Book Antiqua", "Georgia", serif;
+    --fonte-texto: "Georgia", "Times New Roman", serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    color: var(--texto);
+    background-color: transparent;
+    line-height: 1.8;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   FUNDO DA THEOTOKOS (IMAGEM EVIDENCIADA)
+   ========================================================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("https://wallpapercave.com/wp/wp15713548.jpg") center top / cover no-repeat;
+    opacity: 1; /* Imagem totalmente opaca e visível */
+    z-index: -3;
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    /* Gradiente que escurece suavemente no topo, fica transparente no Hero e depois vira creme para suportar o container de leitura */
+    background: linear-gradient(
+        to bottom,
+        rgba(60, 5, 5, 0.45) 0%,
+        rgba(20, 10, 5, 0.15) 30%,
+        rgba(255, 250, 240, 0.85) 80vh,
+        rgba(255, 250, 240, 0.88) 100vh
+    );
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, rgba(87,7,7,0.96), rgba(142,16,16,0.96), rgba(87,7,7,0.96));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 3px solid var(--dourado);
+    box-shadow: 0 5px 30px rgba(0,0,0,0.4);
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
 }
 
 .logo {
