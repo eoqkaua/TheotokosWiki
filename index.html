@@ -972,6 +972,33 @@ footer p {
     display: none !important;
 }
 
+/* Modo de pesquisa: quando há uma busca, somente os resultados
+   encontrados permanecem visíveis no conteúdo principal. */
+body.search-active .container > *:not(.searchable) {
+    display: none !important;
+}
+
+body.search-active .searchable.hidden {
+    display: none !important;
+}
+
+body.search-active .searchable:not(.hidden) {
+    display: block;
+}
+
+body.search-active .hero {
+    min-height: auto;
+    padding-bottom: 28px;
+}
+
+body.search-active .hero-kicker,
+body.search-active .hero h1,
+body.search-active .hero-subtitle,
+body.search-active .creator,
+body.search-active .hero-description {
+    display: none;
+}
+
 /* =========================================================
    RESPONSIVO
    ========================================================= */
@@ -3802,70 +3829,70 @@ Kauã Farias • 2026
 
 function searchSite(){
 
-    const input =
-        document.getElementById("searchInput");
+    const input = document.getElementById("searchInput");
+    const info = document.getElementById("searchInfo");
+    const elements = document.querySelectorAll(".searchable");
 
-    const query =
-        input.value.toLowerCase().trim();
+    if(!input || !info) return;
 
-    const elements =
-        document.querySelectorAll(".searchable");
+    // Normaliza acentos e diferenças de maiúsculas/minúsculas.
+    function normalize(text){
+        return text
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
+    }
 
-    let found = 0;
+    const rawQuery = input.value.trim();
+    const query = normalize(rawQuery);
+    const terms = query.split(/\s+/).filter(Boolean);
 
-    if(query === ""){
+    // Sem pesquisa: restaura a página inteira.
+    if(terms.length === 0){
+        document.body.classList.remove("search-active");
 
         elements.forEach(function(element){
-
             element.classList.remove("hidden");
-
         });
 
-        document.getElementById("searchInfo").innerHTML = "";
-
+        info.innerHTML = "";
         return;
     }
 
+    document.body.classList.add("search-active");
+
+    let found = 0;
+
     elements.forEach(function(element){
+        const text = normalize(element.innerText || element.textContent || "");
 
-        const text =
-            element.innerText.toLowerCase();
+        // Todos os termos digitados precisam aparecer na mesma seção.
+        const matches = terms.every(function(term){
+            return text.includes(term);
+        });
 
-        if(text.includes(query)){
+        element.classList.toggle("hidden", !matches);
 
-            element.classList.remove("hidden");
-
+        if(matches){
             found++;
-
-        }else{
-
-            element.classList.add("hidden");
-
         }
-
     });
 
-    const info =
-        document.getElementById("searchInfo");
-
     if(found === 0){
-
         info.innerHTML =
-            "Nenhum conteúdo encontrado para: <strong>"
-            + query +
+            "Nenhum conteúdo encontrado para: <strong>" +
+            rawQuery +
             "</strong>";
-
     }else{
-
         info.innerHTML =
             found +
-            " seção(ões) encontrada(s) para: <strong>"
-            + query +
+            " seção(ões) encontrada(s) para: <strong>" +
+            rawQuery +
             "</strong>";
-
     }
 
 }
+
 
 
 /* =========================================================
