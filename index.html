@@ -132,7 +132,7 @@ header {
 }
 
 .menu-toggle {
-    display: none;
+    display: block;
     background: transparent;
     border: 1px solid var(--dourado);
     color: var(--dourado-claro);
@@ -143,7 +143,7 @@ header {
 }
 
 nav {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
@@ -158,6 +158,10 @@ nav a {
     font-weight: bold;
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
+}
+
+nav.nav-active {
+    display: flex;
 }
 
 nav a:hover {
@@ -3970,11 +3974,9 @@ if (menuToggle && navMenu) {
     });
 
     window.addEventListener("resize", function() {
-        if (window.innerWidth > 768) {
-            navMenu.classList.remove("nav-active");
-            menuToggle.setAttribute("aria-expanded", "false");
-            menuToggle.setAttribute("aria-label", "Abrir Menu");
-        }
+        navMenu.classList.remove("nav-active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir Menu");
     });
 }
 
